@@ -5,7 +5,7 @@ const { userValidationRules, validate } = require("../middlewares/validator");
 
 const route = express.Router();
 
-route.get("/", authController.login.bind(authController));
+route.get("/", authController.getAll.bind(authController));
 route.get("/render", authController.renderImage.bind(authController));
 route.get("/:id", authController.getById.bind(authController));
 route.delete("/:id", authController.deleteById.bind(authController));
